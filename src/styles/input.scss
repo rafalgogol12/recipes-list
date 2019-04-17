@@ -1,0 +1,26 @@
+input, textarea {
+  &:required {
+    box-shadow: none;
+  }
+}
+
+.input {
+  &__field {
+    &--input {
+      display: block;
+      width: 100%;
+      margin: $halfSpace 0;
+      padding: $halfSpace;
+      height: $inputHeight;
+      border-color: $grey;
+      border-width: 1px;
+      border-style: solid
+    }
+
+    &--textArea {
+      @extend .input__field--input;
+      resize: vertical;
+      min-height: $inputHeight * 2;
+    }
+  }
+}

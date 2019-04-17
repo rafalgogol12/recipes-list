@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "outDir": "./target/js",
+    "sourceMap": true,
+    "module": "commonjs",
+    "target": "es5",
+    "lib": ["es6", "dom", "es2015.core"],
+    "jsx": "react",
+    "allowJs": true,
+    "moduleResolution": "node",
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitThis": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "noUnusedLocals": true,
+    "experimentalDecorators": true
+  },
+  "include": [
+    "./src/**/*", "webpack.common.js"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

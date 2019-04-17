@@ -1,0 +1,24 @@
+$black: #000000;
+$white: #ffffff;
+$lightGrey: #f5f5f5;
+$grey: #dddddd;
+$darkGrey: #333333;
+$lightGreen: #e0efd7;
+$darkGreen: #46543d;
+$blue: #446af1;
+$red: #ff0000;
+
+$smallFont: 0.8em;
+$mediumFont: 1.1em;
+
+$globalRadius: 5px;
+$halfSpace: 10px;
+$generalSpace: 20px;
+
+$inputHeight: 40px;
+
+@mixin shadow {
+  -moz-box-shadow:   0 0 3px 1px $darkGrey;
+  -webkit-box-shadow:  0 0 3px 1px $darkGrey;
+  box-shadow:  0 0 3px 1px $darkGrey;
+}

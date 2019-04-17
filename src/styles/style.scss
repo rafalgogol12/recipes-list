@@ -1,0 +1,191 @@
+@import "./global";
+@import './modal';
+@import './input';
+
+* {
+  font-weight: 500;
+  box-sizing: border-box;
+}
+
+html, body {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.wrapper {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+
+  @media (max-width: 1200px) {
+    padding: $halfSpace;
+  }
+}
+
+.recipes {
+
+  &__list {
+    background-color: $lightGrey;
+    margin: $generalSpace 0;
+    border:1px solid $lightGrey;
+
+    &__single {
+      overflow: hidden;
+      border-width: 0 0 1px 0;
+      border-color: transparent;
+      border-style: solid;
+      
+      &.active {
+        background-color: $lightGreen;
+
+        h3 {
+          color:$darkGreen;
+        }
+      }
+
+      &.separator {
+        border-color: $white;
+      }
+      
+      h3 {
+        margin:0;
+        padding: $generalSpace;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      &-details {
+        background-color: $white;
+        overflow: hidden;
+        padding: 0 $halfSpace;
+
+        h2 { 
+          text-align: center;
+          padding: $generalSpace;
+          border-width: 0 0 1px 0;
+          border-color: $grey;
+          border-style: solid;
+          margin: 0 0 $halfSpace 0
+        }
+
+        &-int {
+          margin: $halfSpace 0;
+
+          p {
+            margin: 0;
+            border: 1px solid $grey;
+            padding: $halfSpace;
+
+            &.noBottom {
+              border-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.btn {
+  background-color: transparent;
+  padding: $halfSpace;
+  font-size: $smallFont;
+  text-transform: capitalize;
+  box-shadow: none;
+  cursor: pointer;
+
+  &-action {
+    color: $white;
+    background-color: $blue;
+  }
+  
+  &-delete {
+    color: $white;
+    background-color: $red;
+  }
+
+  &-group {
+    margin: $halfSpace 0 $generalSpace;
+  }
+
+  &-add {
+    margin: $halfSpace
+  }
+}
+
+.disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.errorStyle {
+  border-color: $red;
+}
+
+.errorStyleText {
+  color: $red;
+  font-weight: bold;
+}
+
+.mediumFont {
+  font-size: $mediumFont;
+}
+
+.space10 {
+  margin: 0 $halfSpace
+}
+
+.app {
+  &__spinner {
+    display: flex;
+    flex: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255,255,255,0.7);
+
+    .spinner {
+      display: inline-block;
+      width: 64px;
+      height: 64px;
+      &:after {
+        content: " ";
+        display: block;
+        width: 46px;
+        height: 46px;
+        margin: 1px;
+        border-radius: 50%;
+        border: 5px solid $blue;
+        border-color: $blue transparent $blue transparent;
+        animation: spinner 1.2s linear infinite;
+
+      }
+    }
+  }
+}
+
+button, input, textarea {
+  &:focus{
+    outline: 0
+  }
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

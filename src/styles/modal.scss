@@ -1,0 +1,42 @@
+.modal {
+  position: absolute;
+  bottom:0;
+  top:0;
+  left:0;
+  right:0;
+  background-color: rgba(0,0,0,0.5);
+
+  &__container {
+
+    background-color: $white;
+    width: 100%;
+    max-width: 600px;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    @include shadow;
+
+    @media (max-width: 768px) {
+      max-width: 100%;
+    }
+
+    & > * {
+      padding: $generalSpace;
+    }
+
+    h2 {
+      margin: 0;
+    }
+
+    &--content {
+      border-width: 1px 0;
+      border-style: solid;
+      border-color: $grey;
+    }
+
+    &--footer {
+      text-align: right;
+    }
+  }
+}
