@@ -2,7 +2,7 @@
 
 In the project directory, first run:
 
-### npm install 
+### `npm install`
 
 And then you can run:
 
